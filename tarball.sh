@@ -16,6 +16,6 @@ d=$(date +%m-%d-%y)
 
 cmd="aws s3api put-object --bucket $1 --key $d/$2 --body $2"
 
-echo "Uploading $1 to s3://$1/$d/$2"
+echo "Uploading $2 to s3://$1/$d/$2"
 
 $cmd
