@@ -1,5 +1,5 @@
 # RTDevOps
-Scripts to make life easier
+Work smarter not harder
 
 ## Tarball.sh
 
