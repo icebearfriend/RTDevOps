@@ -32,6 +32,7 @@ Example: newop.py testop
 
 This produces ./04-27-20/04-27-20_testop_opnotes.txt
 
+![creating opnotes the easy way](https://raw.githubusercontent.com/icebearfriend/stash/master/opnotes.jpg)
 
 
 ## Tarball.sh
