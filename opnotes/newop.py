@@ -6,7 +6,7 @@ from datetime import date
 # gathering date for file string later on
 d = date.today()
 # this is the json file we will parse
-jsonfile = "targets.json"
+jsonfile = sys.argv[2]
 
 # opening the jsonfile variable, located in the /redteam folder. Change value if you are hosting somewhere else
 with open('/redteam/'+jsonfile) as data_file:
@@ -125,9 +125,9 @@ def buildFile (opname):
 
 
 if __name__== "__main__":
-	if len(sys.argv) != 2:
-		print("(+) Usage: {0} <opname>").format(sys.argv[0])
-		print("Please enter your OP name")
+	if len(sys.argv) != 3:
+		print("(+) Usage: {0} <opname> <jsonfile>").format(sys.argv[0])
+		print("Please enter your OP name and jsonfile")
 
 	opname = sys.argv[1]
 	buildFile(opname)
