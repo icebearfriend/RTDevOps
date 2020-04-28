@@ -1,6 +1,10 @@
 # RTDevOps
 Work smarter not harder
 
+Update: 4-28-20
+
+Updated newop.py to take a json argument
+
 Update: 4-27-20
 
 ## newop.py, targets.json
