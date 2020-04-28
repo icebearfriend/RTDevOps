@@ -1,0 +1,37 @@
+{
+
+"handle":"icebear",
+
+"MyHost": [
+{
+"ip":"192.168.119.140", 
+"hostname":"Kali"}],
+
+"targets":[
+
+{"target1":[
+{"ip":"10.10.10.3","hostname": "lame"}
+],
+
+"target2":[
+{"ip":"", "hostname":""}
+],
+
+"target3":[
+{"ip":"", "hostname":""}],
+
+"target4":[
+{"ip":"", "hostname":""}
+],
+
+"target5":[{"ip":"", "hostname":""}]
+}],
+
+"credentials":
+[
+{"cred1":"admin/admin", "cred2":"root/toor","cred3":"","cred4":"","cred5":""}
+]
+
+
+}
+
