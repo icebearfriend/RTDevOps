@@ -28,11 +28,11 @@ The script assumes the following:
  
  The Credentials key can contain any creds or other useful info (like pastables) that you might need during your op. Leave blank if you desire
 
-Save the json when you are complete, and run newop.py <opname> <jsonfile>. Example: newop.py testop targets.json
+Save the json when you are complete, and run python3 newop.py <opname> <jsonfile>. Example: python3 newop.py testop targets.json
 
 The script will parse the json and generate a form for based on date + opname in a folder based on the date. 
 
-Example: newop.py testop target.json
+Example: python3 newop.py testop target.json
 
 This produces ./04-27-20/04-27-20_testop_opnotes.txt
 
