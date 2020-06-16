@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
 
 import glob, os, json, sys, subprocess
-from datetime import date
-
+import datetime
 # gathering date for file string later on
-d = date.today()
+d = datetime.datetime.now()
 # this is the json file we will parse
 jsonfile = sys.argv[2]
 
@@ -102,14 +101,23 @@ def buildit(data):
 # !!!if you do not have sublime, change the command or comment it out
 def buildFile (opname):
 	dtg = d.strftime("%m-%d-%y")
-	directory = "./{0}".format(dtg)
+	op = sys.argv[1]
+	directory = f"./{op.lower()}"
 	access_rights = 0o755 # default chmod is 777, we are changing it to 755
 	if os.path.exists(directory): # checking to see if you've made this directory before
 		os.chdir(directory) # goes to it
 	else:
 		os.mkdir(directory, access_rights) # if you haven't built, build it
-		os.chdir(directory) # change into it
-	opnote_file = "{0}_{1}_opnotes.txt".format(dtg, opname)
+		os.chdir(directory)
+
+	if os.path.exists(dtg):
+		os.chdir(dtg)
+	else:
+		os.mkdir(dtg, access_rights)
+		os.chdir(dtg)
+
+	opnote_file = f'{d.strftime("%m-%d-%y:%H")}_{op.lower()}_opnotes.txt'
+
 	try:
 		f = open(opnote_file, 'x') # try to create a brand new file. The x will ensure that you do not overwrite
 	except:
@@ -131,4 +139,6 @@ if __name__== "__main__":
 
 	opname = sys.argv[1]
 	buildFile(opname)
+
+
 
